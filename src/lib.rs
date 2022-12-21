@@ -3,17 +3,15 @@ use image::{DynamicImage, GenericImageView, ImageResult, Pixel};
 
 const PIXEL_CHAR_ARRAY: [char; 10] = ['W', '@', '#', '8', '&', '*', 'o', ':', '.', ' '];
 
-const TARGET_WIDTH: u32 = 120;
-
 /// Load image from path and reshape the image to TARGET_WIDTH
-pub fn load_image(img_path: &str) -> ImageResult<DynamicImage> {
+pub fn load_image(img_path: &str, target_width: u32) -> ImageResult<DynamicImage> {
     let img = image::open(img_path)?;
-    Ok(resize_image(img, TARGET_WIDTH))
+    Ok(resize_image(img, target_width))
 }
 
 pub fn resize_image(img: DynamicImage, target_width: u32) -> DynamicImage {
     let (src_width, src_height) = img.dimensions();
-    let target_height = get_target_height(src_width, src_height, TARGET_WIDTH);
+    let target_height = get_target_height(src_width, src_height, target_width);
     img.resize(target_width, target_height, FilterType::CatmullRom)
 }
 
