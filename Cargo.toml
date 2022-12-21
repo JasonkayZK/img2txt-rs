@@ -1,0 +1,17 @@
+[package]
+name = "img2txt-rs"
+version = "0.1.0"
+edition = "2021"
+description = "A cli to generate text image."
+repository = "https://github.com/JasonkayZK/img2txt-rs"
+license-file = "LICENSE"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+image = "0.24.5"
+clap = {version = "4.0.30", features = ["derive"]}
+
+[[bin]]
+path = "src/bin/img2txt.rs"
+name = "img2txt"
