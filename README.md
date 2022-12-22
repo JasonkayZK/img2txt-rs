@@ -179,3 +179,11 @@ $ cargo install img2txt-rs
 ```
 
 <br/>
+
+## **Others**
+
+This project is mostly inspired by [《字符作画，我用字符画个冰墩墩》](https://www.wdbyte.com/java/char-image.html)
+
+All you want to know about this project:
+
+- [《将图片转为字符图片的Rust实现》](https://jasonkayzk.github.io/2022/12/22/将图片转为字符图片的Rust实现/)
